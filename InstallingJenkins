@@ -1,0 +1,15 @@
+#on AWS
+yum update -y
+
+wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins.io/redhat/jenkins.repo
+
+#enable key
+rpm --import https://pkg.jenkins.io/redhat/jenkins.io.key
+
+#install jenkins
+
+sudo yum install jenkins -y
+
+#start jenkins as service 
+
+service jenkins start
